@@ -36,7 +36,6 @@ requirements:
     - jinja2
     - cython
     - gcc
-    - libgcc
 
 test:
   commands:
