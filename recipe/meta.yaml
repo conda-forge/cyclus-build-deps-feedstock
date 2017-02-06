@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   features:
     - blas_{{ variant }}
@@ -36,6 +36,8 @@ requirements:
     - jinja2
     - cython
     - gcc
+    - websockets
+    - pprintpp
 
 test:
   commands:
