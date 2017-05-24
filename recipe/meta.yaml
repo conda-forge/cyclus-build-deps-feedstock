@@ -38,7 +38,7 @@ requirements:
     - jinja2
     - cython
     - gcc
-    - websockets
+    - websockets  # [py3k]
     - pprintpp
 
 test:
