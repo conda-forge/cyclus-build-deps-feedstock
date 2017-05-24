@@ -7,12 +7,14 @@ package:
   version: {{ version }}
 
 build:
-  number: 0
+  number: 2
   skip: true  # [win]
   features:
     - blas_{{ variant }}
 
 requirements:
+  build:
+    - python
   run:
     - python
     - cmake
@@ -22,7 +24,7 @@ requirements:
     - blas 1.1 {{ variant }}
     - openblas 0.2.19|0.2.19.*
     - lapack
-    - boost 1.63.*
+    - boost-cpp 1.64.*
     - hdf5 1.8.17|1.8.17.*
     - sqlite 3.13.*
     - pcre
@@ -36,6 +38,8 @@ requirements:
     - jinja2
     - cython
     - gcc
+    - websockets  # [py3k]
+    - pprintpp
 
 test:
   commands:
