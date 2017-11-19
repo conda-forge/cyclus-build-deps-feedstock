@@ -22,10 +22,10 @@ requirements:
     - libxmlpp
     - coincbc
     - blas 1.1 {{ variant }}
-    - openblas 0.2.19|0.2.19.*
+    - openblas 0.2.20|0.2.20.*
     - lapack
     - boost-cpp 1.65.1
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
     - sqlite 3.13.*
     - pcre
     - gettext
