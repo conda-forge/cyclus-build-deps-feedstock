@@ -1,5 +1,5 @@
 {% set name = "cyclus-build-deps" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 {% set variant = "openblas" %}
 
 package:
@@ -7,12 +7,14 @@ package:
   version: {{ version }}
 
 build:
-  number: 1
+  number: 4
   skip: true  # [win]
   features:
     - blas_{{ variant }}
 
 requirements:
+  build:
+    - python
   run:
     - python
     - cmake
@@ -22,8 +24,8 @@ requirements:
     - blas 1.1 {{ variant }}
     - openblas 0.2.19|0.2.19.*
     - lapack
-    - boost 1.63.*
-    - hdf5 1.8.17|1.8.17.*
+    - boost-cpp 1.65.1
+    - hdf5 1.8.18|1.8.18.*
     - sqlite 3.13.*
     - pcre
     - gettext
@@ -36,6 +38,8 @@ requirements:
     - jinja2
     - cython
     - gcc
+    - websockets  # [py3k]
+    - pprintpp
 
 test:
   commands:
@@ -57,4 +61,5 @@ extra:
   recipe-maintainers:
     - scopatz
     - gonuke
-    - Baaaaam
+    - bam241
+    - FlanFlanagan
