@@ -1,5 +1,5 @@
 {% set name = "cyclus-build-deps" %}
-{% set version = "1.5.0" %}
+{% set version = "1.5.3" %}
 {% set variant = "openblas" %}
 
 package:
@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
   features:
     - blas_{{ variant }}
@@ -26,7 +26,7 @@ requirements:
     - lapack
     - boost-cpp 1.65.1
     - hdf5 1.10.1
-    - sqlite 3.13.*
+    - sqlite 3.*
     - pcre
     - gettext
     - bzip2 1.0.*
