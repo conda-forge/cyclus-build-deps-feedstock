@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py27 or py34 or (osx and py35)]
   features:
     - blas_{{ variant }}
@@ -24,7 +24,7 @@ requirements:
     - blas 1.1 {{ variant }}
     - openblas 0.2.20|0.2.20.*
     - lapack
-    - boost-cpp 1.65.1
+    - boost-cpp 1.66.0
     - hdf5 1.10.1
     - sqlite 3.*
     - pcre
