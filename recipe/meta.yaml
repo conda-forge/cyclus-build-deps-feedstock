@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win or py27 or py34 or (osx and py35)]
   features:
     - blas_{{ variant }}
@@ -17,6 +17,7 @@ requirements:
     - python
   run:
     - python
+    - make
     - cmake
     - pkg-config
     - libxmlpp
