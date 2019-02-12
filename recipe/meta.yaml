@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win or py27 or py34 or (osx and py35)]
   features:
     - blas_{{ variant }}
