@@ -14,8 +14,13 @@ build:
 
 requirements:
   build:
+    - {{ compiler('cxx') }}
     - python
   run:
+    - glibmm=2.48
+    - glib==2.48 
+    - libxml2 
+    - libxmlpp
     - python
     - make
     - cmake
@@ -38,7 +43,6 @@ requirements:
     - pandas
     - jinja2
     - cython
-    - gcc
     - websockets  # [py3k]
     - pprintpp
 
