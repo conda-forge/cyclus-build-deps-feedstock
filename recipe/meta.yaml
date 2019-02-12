@@ -17,8 +17,8 @@ requirements:
     - {{ compiler('cxx') }}
     - python
   run:
-    - glibmm=2.48
-    - glib==2.48 
+    - glibmm 2.48
+    - glib 2.48 
     - libxml2 
     - libxmlpp
     - python
