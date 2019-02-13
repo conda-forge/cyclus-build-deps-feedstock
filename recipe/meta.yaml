@@ -13,8 +13,9 @@ build:
     - blas_{{ variant }}
 
 requirements:
-  run:
+  build:
     - {{ compiler('cxx') }}
+  run:
     - python
     - glibmm 2.48
     - glib 2.48 
