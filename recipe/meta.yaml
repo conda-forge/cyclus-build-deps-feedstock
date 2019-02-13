@@ -7,15 +7,20 @@ package:
   version: {{ version }}
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win or py27 or py34 or (osx and py35)]
   features:
     - blas_{{ variant }}
 
 requirements:
   build:
+    - {{ compiler('cxx') }}
     - python
   run:
+    - glibmm 2.48
+    - glib 2.48 
+    - libxml2 
+    - libxmlpp
     - python
     - make
     - cmake
@@ -38,7 +43,6 @@ requirements:
     - pandas
     - jinja2
     - cython
-    - gcc
     - websockets  # [py3k]
     - pprintpp
 
