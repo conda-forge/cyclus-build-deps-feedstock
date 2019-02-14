@@ -7,16 +7,16 @@ package:
   version: {{ version }}
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
   features:
     - blas_{{ variant }}
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
-  run:
     - python
+  run:
+    - {{ compiler('cxx') }}
     - glibmm 2.48
     - glib 
     - libxml2 
