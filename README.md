@@ -18,8 +18,8 @@ Summary: Build dependency metapackage for Cyclus.
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/scratch-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/scratch-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/scratch-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/scratch-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/cyclus-build-deps-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/cyclus-build-deps-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/cyclus-build-deps-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/cyclus-build-deps-feedstock)
 ![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
