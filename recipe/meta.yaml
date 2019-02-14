@@ -18,7 +18,7 @@ requirements:
   run:
     - python
     - glibmm 2.48
-    - glib 2.48 
+    - glib 
     - libxml2 
     - libxmlpp
     - python
