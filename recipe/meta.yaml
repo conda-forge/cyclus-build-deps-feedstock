@@ -13,8 +13,6 @@ build:
     - blas_{{ variant }}
 
 requirements:
-  build:
-    - {{ compiler('cxx') }}
   host:
     - python
   run:
