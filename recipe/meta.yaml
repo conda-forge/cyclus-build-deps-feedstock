@@ -7,14 +7,14 @@ package:
   version: {{ version }}
 
 build:
-  number: 3
-  skip: true  # [win]
+  number: 4
+  skip: true  # [win or py37]
   features:
     - blas_{{ variant }}
 
 requirements:
-  build:
-    - {{ compiler('cxx') }}
+  host:
+    - python
   run:
     - python
     - glibmm 2.48
@@ -31,7 +31,7 @@ requirements:
     - openblas 0.2.20|0.2.20.*
     - lapack
     - boost-cpp 1.66.0
-    - hdf5 1.10.1
+    - hdf5 
     - sqlite 3.*
     - pcre
     - gettext
