@@ -12,8 +12,6 @@ build:
 
 requirements:
   host:
-    - libblas
-    - libcblas
     - python
   run:
     - python
@@ -24,6 +22,9 @@ requirements:
     - python
     - make
     - cmake
+    - libblas
+    - libcblas
+    - liblapack
     - pkg-config
     - libxmlpp
     - coincbc
