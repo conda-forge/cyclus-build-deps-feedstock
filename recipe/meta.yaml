@@ -1,19 +1,19 @@
 {% set name = "cyclus-build-deps" %}
 {% set version = "1.5.3" %}
-{% set variant = "openblas" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 build:
-  number: 4
+  number: 5
   skip: true  # [win or py37]
   features:
-    - blas_{{ variant }}
 
 requirements:
   host:
+    - libblas
+    - libcblas
     - python
   run:
     - python
@@ -27,9 +27,6 @@ requirements:
     - pkg-config
     - libxmlpp
     - coincbc
-    - blas 1.1 {{ variant }}
-    - openblas 0.2.20|0.2.20.*
-    - lapack
     - boost-cpp 1.66.0
     - hdf5 
     - sqlite 3.*
