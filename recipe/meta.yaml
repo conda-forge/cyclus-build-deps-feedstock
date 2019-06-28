@@ -40,7 +40,7 @@ requirements:
     - pytables
     - pandas
     - jinja2
-    - cython
+    - cython 0.26
     - websockets  # [py3k]
     - pprintpp
 
