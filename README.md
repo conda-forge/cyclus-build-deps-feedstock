@@ -180,5 +180,6 @@ Feedstock Maintainers
 * [@FlanFlanagan](https://github.com/FlanFlanagan/)
 * [@bam241](https://github.com/bam241/)
 * [@gonuke](https://github.com/gonuke/)
-* [@scopatz](https://github.com/scopatz/)
 * [@katyhuff](https://github.com/katyhuff/)
+* [@scopatz](https://github.com/scopatz/)
+
