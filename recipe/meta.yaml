@@ -1,47 +1,62 @@
 {% set name = "cyclus-build-deps" %}
-{% set version = "1.5.3" %}
+{% set version = "1.5.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 build:
-  number: 6
-  skip: true  # [win or py37]
-  features:
+  number: 0
+  skip: True  # [win or py<=27 or py>=37]
+  detect_binary_files_with_prefix: true
 
 requirements:
   host:
-    - python
-  run:
-    - python
-    - glibmm 2.48
-    - glib 
-    - libxml2 
-    - libxmlpp
-    - python
-    - make
     - cmake
+    - pkg-config
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - python
+    - glibmm
+    - glib 2.56
+    - jinja2
+    - pandas
+    - cython 0.26
+    - coincbc <2.9.10
+    - boost-cpp <1.69
     - libblas
     - libcblas
     - liblapack
-    - pkg-config
     - libxmlpp
-    - coincbc
-    - boost-cpp 1.66.0
-    - hdf5 
-    - sqlite 3.*
+    - bzip2
+    - hdf5
+    - sqlite
     - pcre
     - gettext
-    - bzip2 1.0.*
-    - xz 5.2.*
-    - setuptools
-    - nose
-    - pytables
-    - pandas
+    - xz
+  run:
+    - cmake
+    - pkg-config
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - python
     - jinja2
-    - cython 0.26
-    - websockets  # [py3k]
+    - pandas
+    - glibmm
+    - glib 2.56
+    - libxmlpp
+    - {{ pin_compatible("coincbc", max_pin="x.x.x") }}
+    - libblas
+    - libcblas
+    - liblapack
+    - {{ pin_compatible("boost-cpp", max_pin="x.x.x") }}
+    - hdf5
+    - sqlite
+    - pcre
+    - gettext
+    - bzip2
+    - xz
+    - websockets
     - pprintpp
 
 test:
