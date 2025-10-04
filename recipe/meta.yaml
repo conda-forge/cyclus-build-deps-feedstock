@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 build:
-  number: 6
+  number: 7
   skip: true  # [win or py37]
   features:
 
